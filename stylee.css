@@ -1,0 +1,116 @@
+
+body {
+  /* background-image: linear-gradient(to right, #f46b45, #eea849); */
+  background-color: rgb(112,146,190);
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+.letter-div{
+font-size: 3em;
+}
+p{
+  font-size: 1.5em;
+
+}
+.wrapper {
+ 
+  margin: auto;
+}
+.hint-div {
+  color: chartreuse;
+}
+
+.notif-btn {
+  cursor: pointer;
+}
+h1{
+  font-size: 3em;
+}
+.alpha {
+  height: 2rem;
+  background: #ffe5b4;
+  border: none;
+  border-radius: 4px;
+  margin: 3px;
+  cursor: pointer;
+}
+.alpha:hover {
+  background-color: #e75480;
+  border: none;
+}
+.disabled {
+  pointer-events: none;
+  background-color: darkgray;
+}
+.bugd{
+  display: flex;
+    height: content;
+    width: 100%;
+}
+.zuun{
+   width: 40%;
+    padding: 20px 40px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+
+}
+.baruun{
+ width: 60%;
+    padding: 20px 40px;
+    text-align: center;
+}
+.word-div {
+  display: flex;
+}
+.word {
+  margin-right: 1.5rem;
+}
+.notif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #D3D3D3;
+  width: 20rem;
+  padding: 20px 10px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.blur {
+  filter: blur(2px);
+}
+.hidden {
+  display: none;
+}
+#hangmanPic{
+  width: 600px;
+  margin-right: auto;
+  display: flex;
+}
+@media only screen and (max-width: 700px) {
+    .bugd{
+        flex-direction: column; 
+    }
+    .zuun {
+        width: auto;
+    }
+    .baruun{
+      width: auto;
+    }
+   
+    
+    
+ 
+}
+@media only screen and (min-width: 600px) {
+    .bugd {
+        height: fit-content;
+    }
+    .zuun{
+
+    }
+   
+}
