@@ -1,15 +1,15 @@
 
-const letterDiv = document.querySelector('.letter-div');
-const hintButton = document.querySelector('.hint-btn');
-const resetButton = document.querySelector('.reset-btn');
-const hintDiv = document.querySelector('.hint-div');
-const hintText = document.querySelector('.hint-txt');
-const liveSpan = document.querySelector('.lives');
-const wordDiv = document.querySelector('.word-div');
-const notif = document.querySelector('.notif');
-const notifContent = document.querySelector('.notif-content');
-const notifSpan = document.querySelector('.notif-span');
-const playAgain = document.querySelector('.notif-btn');
+var letterDiv = document.querySelector('.letter-div');
+var hintButton = document.querySelector('.hint-btn');
+var resetButton = document.querySelector('.reset-btn');
+var hintDiv = document.querySelector('.hint-div');
+var hintText = document.querySelector('.hint-txt');
+var liveSpan = document.querySelector('.lives');
+var wordDiv = document.querySelector('.word-div');
+var notif = document.querySelector('.notif');
+var notifContent = document.querySelector('.notif-content');
+var notifSpan = document.querySelector('.notif-span');
+var playAgain = document.querySelector('.notif-btn');
 
 // keeping letters using javascript
 // so untill we put html content into letter-div,
@@ -18,7 +18,7 @@ let letters;
 
 let lives;
 
-const words = new Map([
+var words = new Map([
   ['увс','Монголын хамгийн том нууртай газар'],
   ['ховд','Хамгийн олон ястантай аймаг'],
   ['баянөлгий','Ачит нуур хаан байдаг вэ?'],
@@ -32,17 +32,17 @@ const words = new Map([
 ]);
 
 // making a list of only keys from words
-const word_list = [...words.keys()];
+var word_list = [...words.keys()];
 
 // get random word from word_list function
-const getRandomWord = function (list) {
+var getRandomWord = function (list) {
   return list[Math.floor(Math.random() * word_list.length)];
 
 };
 
 // random word will be selected upon every reset and init
 let select_word;
-const init = function (state) {
+var init = function (state) {
   wordDiv.innerHTML = '';
   if (state === 'start') {
     // putting all letters into html
@@ -69,7 +69,7 @@ const init = function (state) {
 
   // putting selected word
   for (let i = 0; i < select_word.length; i++) {
-    const html = `<p class="word">_</p>`;
+    var html = `<p class="word">_</p>`;
     wordDiv.insertAdjacentHTML('beforeend', html);
   }
   
@@ -78,14 +78,14 @@ const init = function (state) {
 init('start');
 
 // show notification
-const showNotif = function (msg) {
+var showNotif = function (msg) {
   notif.classList.remove('hidden');
   notifSpan.textContent = select_word;
   notifContent.textContent = `You ${msg}`;
   // lives = 3;
 };
 // decrease life
-const decreaseLife = function () {
+var decreaseLife = function () {
  
   lives--;
   document.getElementById('hangmanPic').src = './img/' + lives + '.jpeg';
@@ -97,11 +97,11 @@ const decreaseLife = function () {
 };
 // get multiple matching indexes of pressed letter
 // to the selected word
-const getindexes = function (letter) {
+var getindexes = function (letter) {
   let indexes = [];
   [...select_word].forEach((val, i) => {
     if (val === letter) {
-      const index = i;
+      var index = i;
       indexes.push(index);
     }
   });
@@ -110,7 +110,7 @@ const getindexes = function (letter) {
 };
 
 // check if we get complete word
-const checkWord = function () {
+var checkWord = function () {
   let val = true;
   for (let i = 0; i < wordDiv.children.length; i++) {
     if (wordDiv.children[i].textContent === '_') {
@@ -122,11 +122,11 @@ const checkWord = function () {
 };
 
 // letters event listener function
-const letterPress = function () {
-  const letter = this.textContent.toLowerCase();
+var letterPress = function () {
+  var letter = this.textContent.toLowerCase();
 
   if (select_word.includes(letter)) {
-    const indexes_list = getindexes(letter);
+     indexes_list = getindexes(letter);
     indexes_list.forEach((val, i) => {
       wordDiv.children[val].textContent = this.textContent;
     });
