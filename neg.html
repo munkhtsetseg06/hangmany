@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>neg</title>
+	<link rel="stylesheet" type="text/css" href="style10.css">
+	
+</head>
+<body>
+<script>
+		var name;
+		name= window.prompt('Та нэрээ оруулна уу?');
+		a=""
+		b=name.length
+		while(0<=b){
+			a=a+name.charAt(b);
+			b=b-1;
+		}
+		if(name==a){
+			document.writeln("<p>Таны нэр палиндром &#128513</p>")
+		}
+		else{
+			document.writeln("<p>Таны нэр палиндром биш байна &#128520</p>")
+		}
+	</script>
+</body>
+</html>
