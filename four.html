@@ -1,0 +1,30 @@
+<DOCTYPE! html>
+<html>
+<head>
+<title> Байшин </title>
+<link rel="stylesheet" type="text/css" href="style10.css">
+</head>
+<body>
+<script>
+var number = window.prompt("Тухайн айлын тоотыг оруулна уу?");
+if(number <= 108){
+var orts = parseInt(number / 36);
+number = number - orts * 36;
+var davhar = parseInt(number / 4);
+number = number - davhar * 4;
+orts ++;
+davhar ++;
+if(number == 0){
+number = 4;
+davhar --;
+}
+if(davhar == 0){
+davhar = 9;
+orts --;
+}
+document.write(orts+"-р орцны "+davhar+"-р давхрын "+number+"-р хаалга");}
+else
+document.write("<p>Тийм айл байхгүй</p>");
+</script>
+</body>
+</html>
