@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>five</title>
+	<link rel="stylesheet" type="text/css" href="style10.css">
+</head>
+<body>
+	<div id="morning">
+		<img src="./img/nogoon.jpeg">
+	</div>
+	<div id="evening">
+		
+	</div>
+<script type="text/javascript">
+	var d = new Date();
+	var hour = d.getHours();
+	
+	
+	if(hour < 15){
+		checkzurag();
+	} else if(hour>18){
+		checkzuraga(); 
+	} 
+	function checkzurag() {
+  document.getElementById('morning').src = './img/nogoon.jpeg';
+}
+function checkzuraga() {
+  document.getElementById('evening').src = './img/ulaan.jpeg';
+}
+	
+	
+</script>
+</body>
+</html>
