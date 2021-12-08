@@ -15,22 +15,35 @@ p{
 }
 .wrapper {
  
-  margin: auto;
+  
 }
 .hint-div {
   color: chartreuse;
 }
-
+.reset-btn{
+   color: white;
+    background-color: #dd6d93;
+    border-color: #dd6d93;
+    padding: 10px 0;
+    max-width: auto;
+}
 .notif-btn {
   cursor: pointer;
+   color: black;
+    background-color: white;
+    border-color: black;
+    padding: 10px 0;
+    max-width: auto;
+    width: 40%;
 }
 h1{
   font-size: 3em;
 }
 .alpha {
   height: 2rem;
-  background: #ffe5b4;
+  background: #fdd0dfe0;
   border: none;
+  color: white;
   border-radius: 4px;
   margin: 3px;
   cursor: pointer;
@@ -86,13 +99,14 @@ h1{
   display: none;
 }
 #hangmanPic{
-  width: 600px;
+  width: 400px;
   margin-right: auto;
   display: flex;
 }
 @media only screen and (max-width: 700px) {
     .bugd{
         flex-direction: column; 
+
     }
     .zuun {
         width: auto;
@@ -107,10 +121,14 @@ h1{
 }
 @media only screen and (min-width: 600px) {
     .bugd {
-        height: fit-content;
+        height: content;
     }
-    .zuun{
+    .zuun img{
+      width: 200px;
 
+    }
+     .baruun{
+      width: auto;
     }
    
 }
